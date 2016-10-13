@@ -18,4 +18,8 @@ describe("A suite", function() {
   it("has only one class 'foo' ", function() {
     expect(mount(<Foo />).find('.foo').length).toBe(1);
   });
+
+  it("contians the class bar", function() {
+    expect(shallow(<Foo />).is('.bar')).toBe(false);
+  });
 });
